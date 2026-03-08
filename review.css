@@ -1,0 +1,286 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* bottom 1/3 */
+.review-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease both;
+}
+
+/* top 2/3 */
+.review-map-panel {
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+#review-map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#review-map-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+#review-map-image {
+    display: block;
+    max-width: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.review-flag {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--color-sage);
+    border: 2px solid var(--color-sage-light);
+    box-shadow: 0 0 0 3px rgba(127, 168, 130, 0.2), 0 0 10px rgba(127, 168, 130, 0.4);
+    cursor: pointer;
+    z-index: 10;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.review-flag:hover {
+    transform: translate(-50%, -50%) scale(1.4);
+    box-shadow: 0 0 0 5px rgba(127, 168, 130, 0.25), 0 0 18px rgba(127, 168, 130, 0.6);
+}
+
+.review-flag.selected {
+    background: var(--color-sage-light);
+    box-shadow:
+        0 0 0 4px rgba(127, 168, 130, 0.35),
+        0 0 22px rgba(127, 168, 130, 0.7);
+    transform: translate(-50%, -50%) scale(1.25);
+    animation: flagPulse 1.6s ease infinite;
+}
+
+@keyframes flagPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px rgba(127, 168, 130, 0.35), 0 0 22px rgba(127, 168, 130, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(127, 168, 130, 0.15), 0 0 32px rgba(127, 168, 130, 0.5);
+    }
+}
+
+.review-table-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: var(--space-md) var(--space-xl);
+    background: var(--color-surface);
+    gap: var(--space-md);
+}
+
+.review-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.review-header h2 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-sage-light);
+}
+
+.review-subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-slate-dark);
+    font-family: var(--font-body);
+}
+
+.table-wrapper {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.flag-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+}
+
+.flag-table thead tr {
+    background: var(--color-surface-2);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.flag-table th {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-slate);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.flag-table tbody tr {
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.flag-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.flag-table tbody tr:hover {
+    background: rgba(127, 168, 130, 0.05);
+}
+
+/* highlight current row */
+.flag-table tbody tr.selected {
+    background: rgba(127, 168, 130, 0.1);
+    box-shadow: inset 3px 0 0 var(--color-sage);
+}
+
+.flag-table tbody tr.approved {
+    opacity: 0.5;
+}
+
+.flag-table tbody tr.rejected {
+    opacity: 0.3;
+    text-decoration: line-through;
+    color: var(--color-slate-dark);
+}
+
+.flag-table td {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.82rem;
+    color: var(--color-text);
+    vertical-align: middle;
+}
+
+.flag-table td.coord {
+    font-family: monospace;
+    font-size: 0.78rem;
+    color: var(--color-slate-light);
+    letter-spacing: 0.04em;
+}
+
+/* user agreement pill */
+.agreement {
+    display: inline-block;
+    padding: 0.2em 0.65em;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.agreement.high {
+    background: rgba(127, 168, 130, 0.15);
+    color: var(--color-sage-light);
+    border: 1px solid rgba(127, 168, 130, 0.3);
+}
+
+.agreement.mid {
+    background: rgba(138, 151, 168, 0.12);
+    color: var(--color-slate-light);
+    border: 1px solid rgba(138, 151, 168, 0.25);
+}
+
+.agreement.low {
+    background: rgba(200, 150, 100, 0.1);
+    color: #c8a070;
+    border: 1px solid rgba(200, 150, 100, 0.2);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+}
+
+.action-btn {
+    padding: 0.25rem 0.7rem;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    border: 1px solid;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+}
+
+.action-btn.approve {
+    color: var(--color-sage-light);
+    background: transparent;
+    border-color: var(--color-sage-dark);
+}
+
+.action-btn.approve:hover {
+    background: var(--color-sage-dark);
+    color: var(--color-bg);
+}
+
+.action-btn.reject {
+    color: var(--color-slate);
+    background: transparent;
+    border-color: var(--color-border);
+}
+
+.action-btn.reject:hover {
+    color: #e08080;
+    border-color: #e08080;
+}
+
+.flag-table tr.approved .action-btn,
+.flag-table tr.rejected .action-btn {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+@media (max-width: 640px) {
+    .review-table-panel {
+        padding: var(--space-md);
+    }
+
+    .flag-table th,
+    .flag-table td {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: var(--space-xs);
+        align-items: flex-start;
+    }
+}

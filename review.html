@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Civiscan Review</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="review.css">
+    <script src="review.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href='index.html'>Civican</a></h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="map.html">Map</a>
+            <a href="review.html">Review</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <div class="review-page">
+
+        <div class="review-map-panel">
+            <div id="review-map">
+                <div id="review-map-canvas">
+                    <img id="review-map-image" src="examplemap.webp" alt="Section DEMO-1 map">
+                </div>
+            </div>
+        </div>
+
+        <div class="review-table-panel">
+            <div class="review-header">
+                <h2>Aggregated Flags</h2>
+                <span class="review-subtitle">Section DEMO-1</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="flag-table">
+                    <thead>
+                        <tr>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                            <th>Agreement</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- dummy data -->
+                        <tr data-flag="1" data-lat="0.38" data-lng="0.42">
+                            <td class="coord">40.712</td>
+                            <td class="coord">-74.001</td>
+                            <td><span class="agreement high">3 users</span></td>
+                            <td class="actions">
+                                <button class="action-btn approve">Approve</button>
+                                <button class="action-btn reject">Reject</button>
+                            </td>
+                        </tr>
+                        <tr data-flag="2" data-lat="0.55" data-lng="0.61">
+                            <td class="coord">40.713</td>
+                            <td class="coord">-74.002</td>
+                            <td><span class="agreement mid">2 users</span></td>
+                            <td class="actions">
+                                <button class="action-btn approve">Approve</button>
+                                <button class="action-btn reject">Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

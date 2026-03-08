@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+:root {
+    --color-bg: #1a1e22;
+    --color-surface: #222830;
+    --color-surface-2: #2b3240;
+    --color-border: #303844;
+
+    --color-slate: #8a97a8;
+    --color-slate-light: #b0bcc9;
+    --color-slate-dark: #4e5d6c;
+
+    --color-sage: #7fa882;
+    --color-sage-light: #a3c4a6;
+    --color-sage-dark: #4f7a52;
+    --color-sage-glow: rgba(127, 168, 130, 0.12);
+
+    --color-text: #dce5ec;
+    --color-text-muted: #7a8fa0;
+    --color-heading: #eef3f7;
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-hero: 'Satoshi', sans-serif;
+
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    --space-2xl: 7rem;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+
+    --transition: 0.25s ease;
+    --transition-slow: 0.5s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+    scrollbar-color: var(--color-sage-dark) var(--color-bg);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-heading);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.8rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+}
+
+p {
+    color: var(--color-text-muted);
+    max-width: 60ch;
+}
+
+a {
+    color: var(--color-sage-light);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-sage);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}

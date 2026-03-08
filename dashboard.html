@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Civiscan Dashboard</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href='index.html'>Civiscan</a></h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="map.html">Map</a>
+            <a href="review.html">Review</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <main class="dashboard">
+
+        <div class="dashboard-heading">
+            <h2>Dashboard</h2>
+            <span class="dashboard-subtitle">Demo Project · Updated 2 minutes ago</span>
+        </div>
+
+        <div class="stat-grid">
+
+            <div class="stat-card" data-animate>
+                <span class="stat-label">Sections Completed</span>
+                <span class="stat-value" data-count="24">0</span>
+                <span class="stat-sub">of 40 total</span>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill" style="--fill: 60%"></div>
+                </div>
+            </div>
+
+            <div class="stat-card" data-animate>
+                <span class="stat-label">Flags Submitted</span>
+                <span class="stat-value" data-count="318">0</span>
+                <span class="stat-sub">across all sections</span>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill" style="--fill: 100%"></div>
+                </div>
+            </div>
+
+            <div class="stat-card" data-animate>
+                <span class="stat-label">Accepted Flag %</span>
+                <span class="stat-value" data-count="73" data-suffix="%">0</span>
+                <span class="stat-sub">231 of 318 approved</span>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill" style="--fill: 73%"></div>
+                </div>
+            </div>
+
+            <div class="stat-card" data-animate>
+                <span class="stat-label">Contributors</span>
+                <span class="stat-value" data-count="58">0</span>
+                <span class="stat-sub">active this week</span>
+                <div class="stat-bar">
+                    <div class="stat-bar-fill" style="--fill: 80%"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="dashboard-lower">
+            <div class="dash-panel activity-panel">
+                <h3 class="panel-title">Recent Activity</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <span class="activity-dot high"></span>
+                        <div class="activity-body">
+                            <span class="activity-text">Section 07 submitted</span>
+                            <span class="activity-meta">ecantwell · 2 min ago</span>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <span class="activity-dot mid"></span>
+                        <div class="activity-body">
+                            <span class="activity-text">4 flags approved in Section 12</span>
+                            <span class="activity-meta">reviewer · 18 min ago</span>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <span class="activity-dot low"></span>
+                        <div class="activity-body">
+                            <span class="activity-text">2 flags rejected in Section 03</span>
+                            <span class="activity-meta">reviewer · 34 min ago</span>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <span class="activity-dot high"></span>
+                        <div class="activity-body">
+                            <span class="activity-text">Section 19 submitted</span>
+                            <span class="activity-meta">aortiz · 1 hr ago</span>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <span class="activity-dot mid"></span>
+                        <div class="activity-body">
+                            <span class="activity-text">Section 22 submitted</span>
+                            <span class="activity-meta">iconner · 3 hr ago</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dash-panel progress-panel">
+                <h3 class="panel-title">Section Progress</h3>
+                <ul class="progress-list">
+                    <li class="progress-item">
+                        <div class="progress-meta">
+                            <span class="progress-name">Section DEMO-1</span>
+                            <span class="progress-status done">Complete</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--fill: 100%"></div>
+                        </div>
+                    </li>
+                    <li class="progress-item">
+                        <div class="progress-meta">
+                            <span class="progress-name">Section 07</span>
+                            <span class="progress-status done">Complete</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--fill: 100%"></div>
+                        </div>
+                    </li>
+                    <li class="progress-item">
+                        <div class="progress-meta">
+                            <span class="progress-name">Section 12</span>
+                            <span class="progress-status review">Under Review</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--fill: 70%"></div>
+                        </div>
+                    </li>
+                    <li class="progress-item">
+                        <div class="progress-meta">
+                            <span class="progress-name">Section 15</span>
+                            <span class="progress-status active">In Progress</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--fill: 40%"></div>
+                        </div>
+                    </li>
+                    <li class="progress-item">
+                        <div class="progress-meta">
+                            <span class="progress-name">Section 23</span>
+                            <span class="progress-status pending">Pending</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="--fill: 0%"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="new-project-section">
+            <div class="new-project-header">
+                <h3 class="panel-title">Start a New Project</h3>
+                <span class="new-project-sub">Choose a data source to begin</span>
+            </div>
+            <div class="source-cards">
+
+                <button class="source-card" id="btn-file-upload">
+                    <div class="source-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                    </div>
+                    <span class="source-title">File Upload</span>
+                    <span class="source-desc">Import local raster or LiDAR data files</span>
+                </button>
+
+                <button class="source-card" id="btn-opentopo">
+                    <div class="source-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" />
+                        </svg>
+                    </div>
+                    <span class="source-title">OpenTopography API</span>
+                    <span class="source-desc">Fetch data via OpenTopography</span>
+                </button>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- new project modals -->
+    <div class="modal-backdrop" id="modal-file" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-file-title">
+
+            <div class="modal-header">
+                <h2 id="modal-file-title">New Project ⸻ File Upload</h2>
+                <!-- apparently triple em dashes are a thing -->
+                <button class="modal-close" data-close="modal-file" aria-label="Close">✕</button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="field-group">
+                    <label class="field-label" for="file-project-name">Project Name</label>
+                    <input class="field-input" id="file-project-name" type="text"
+                        placeholder="e.g. Survey Region Alpha">
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Data Files</label>
+                    <div class="dropzone" id="dropzone">
+                        <div class="dropzone-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <polyline points="17 8 12 3 7 8" />
+                                <line x1="12" y1="3" x2="12" y2="15" />
+                            </svg>
+                        </div>
+                        <p class="dropzone-text">Drag &amp; drop files here</p>
+                        <p class="dropzone-sub">or <label class="dropzone-browse" for="file-input">browse files</label>
+                        </p>
+                        <input type="file" id="file-input" multiple accept=".tif,.tiff,.las,.laz,.geojson" hidden>
+                        <p class="dropzone-hint">.tif · .las · .laz · .geojson</p>
+                    </div>
+                    <ul class="file-list" id="file-list"></ul>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Latitude Range</label>
+                    <div class="coord-row">
+                        <input class="field-input" type="number" placeholder="Min latitude" step="0.0001">
+                        <span class="coord-sep">to</span>
+                        <input class="field-input" type="number" placeholder="Max latitude" step="0.0001">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Longitude Range</label>
+                    <div class="coord-row">
+                        <input class="field-input" type="number" placeholder="Min longitude" step="0.0001">
+                        <span class="coord-sep">to</span>
+                        <input class="field-input" type="number" placeholder="Max longitude" step="0.0001">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Add Reviewers</label>
+                    <div class="reviewer-input-row">
+                        <input class="field-input" id="file-reviewer-input" type="email"
+                            placeholder="email@example.com">
+                        <button class="reviewer-add-btn" data-target="file-reviewer-list">Add</button>
+                    </div>
+                    <ul class="reviewer-list" id="file-reviewer-list"></ul>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="modal-btn cancel" data-close="modal-file">Cancel</button>
+                <button class="modal-btn save">Save &amp Exit</button>
+                <button class="modal-btn confirm">Confirm</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- there might be a way to make this and the other modal without repeating most of the code but I don't know it if there is -->
+    <div class="modal-backdrop" id="modal-opentopo" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-topo-title">
+
+            <div class="modal-header">
+                <h2 id="modal-topo-title">New Project ⸻ OpenTopography API</h2>
+                <button class="modal-close" data-close="modal-opentopo" aria-label="Close">✕</button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="field-group">
+                    <label class="field-label" for="topo-project-name">Project Name</label>
+                    <input class="field-input" id="topo-project-name" type="text"
+                        placeholder="e.g. Survey Region Alpha">
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="topo-api-key">OpenTopography API Key</label>
+                    <div class="password-wrap">
+                        <input class="field-input" id="topo-api-key" type="password" placeholder="Paste your API key">
+                        <button class="toggle-visibility" data-target="topo-api-key" aria-label="Toggle visibility">
+                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Latitude Range</label>
+                    <div class="coord-row">
+                        <input class="field-input" type="number" placeholder="Min latitude" step="0.0001">
+                        <span class="coord-sep">to</span>
+                        <input class="field-input" type="number" placeholder="Max latitude" step="0.0001">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Longitude Range</label>
+                    <div class="coord-row">
+                        <input class="field-input" type="number" placeholder="Min longitude" step="0.0001">
+                        <span class="coord-sep">to</span>
+                        <input class="field-input" type="number" placeholder="Max longitude" step="0.0001">
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Add Reviewers</label>
+                    <div class="reviewer-input-row">
+                        <input class="field-input" id="topo-reviewer-input" type="email"
+                            placeholder="email@example.com">
+                        <button class="reviewer-add-btn" data-target="topo-reviewer-list">Add</button>
+                    </div>
+                    <ul class="reviewer-list" id="topo-reviewer-list"></ul>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="modal-btn cancel" data-close="modal-opentopo">Cancel</button>
+                <button class="modal-btn save">Save &amp; Exit</button>
+                <button class="modal-btn confirm">Confirm</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
